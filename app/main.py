@@ -1,4 +1,6 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, UploadFile, File
+import pandas as pd
+
 from app.utils.data_loader import load_csv
 from app.services.metrics import calculate_metrics
 from app.services.validator import validate_dataframe
@@ -13,9 +15,11 @@ def health_check():
     return {"status":"running"}
 
 
-@app.get("/analyze")
-def analyze_data():
-    df = load_csv("data/sample_data.csv")
+@app.post("/analyze-file")
+async def analyze_data(file: UploadFile = File(...)):
+    # df = load_csv("data/sample_data.csv") // stattic test file
+    df = pd.read_csv(file.file)
+
     validation = validate_dataframe(df)
     if not validation["is_valid"]:
         return {"validation" : validation}
