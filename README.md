@@ -1,2 +1,113 @@
-# AI-Powered-Operations-Assistant
-Automate data cleaning + generate AI summaries so teams don’t manually analyze reports.
+# OPS-AI-ASSISTANT
+
+An **AI-assisted operational analytics tool** that converts raw metrics into clear, human-readable insights using a **pluggable AI backend**.
+
+This project demonstrates how traditional data processing can be enhanced with **local, open‑source AI models** (via Ollama) while keeping the architecture flexible enough to swap AI providers later.
+
+---
+
+## 🚀 What this project does
+- Loads and validates operational / business metrics
+- Computes useful metrics programmatically
+- Uses an AI model to generate **executive‑style insight summaries**
+- Works **without OpenAI or paid APIs**
+- Designed to run **locally first**, deployable later
+
+Example output includes:
+- Key observations
+- Anomalies
+- Risks and improvement areas
+
+---
+
+## 🧠 Why this project exists
+Instead of *chasing companies* with resumes alone, this project focuses on **building capability**:
+
+> *A system that blends analytics, backend engineering, and applied AI.*
+
+It is intentionally simple, readable, and practical — mirroring real internal tools used in startups and operations teams.
+
+---
+
+## 🏗️ Architecture (current)
+```
+app/
+├── services/
+│   ├── ai_client.py      # AI backend (Ollama today, swappable later)
+│   ├── ai_summary.py     # AI-driven insight generation
+│   ├── metrics.py        # Metric calculations
+│   └── validator.py      # Input validation
+│
+├── utils/
+│   └── data_loader.py    # CSV / data loading
+│
+├── main.py               # Entry point
+└── config.py             # Feature flags
+```
+
+AI is intentionally isolated behind a service layer so it can be replaced with:
+- Hosted open‑source APIs
+- Cloud inference services
+- Mock implementations
+
+---
+
+## 🤖 AI Backend (current)
+- **Ollama** (local inference server)
+- Model: `mistral`
+- No API keys
+- No quotas
+- Fully offline capable
+
+---
+
+## ▶️ How to run locally
+
+### 1. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Install & start Ollama
+```bash
+ollama serve
+ollama pull mistral
+```
+
+### 3. Run the app
+```bash
+python -m app.main
+```
+
+Or test AI directly:
+```bash
+python -m app.services.ai_summary
+```
+
+---
+
+## 🧪 Current status
+- ✅ Data loading
+- ✅ Metric computation
+- ✅ Local AI integration
+- ✅ Insight generation
+
+---
+
+## 🔮 Planned next steps
+- Optional deployment on EC2
+- Swap AI backend to a free hosted open‑source API for public demo
+- Improve prompt structure
+- Add structured (JSON) AI output
+
+---
+
+## 📌 Key takeaway
+This is not a demo toy.
+
+It is a **realistic, extensible foundation** for AI‑assisted analytics — built to learn, iterate, and showcase applied engineering skills.
+
+---
+
+*Built with focus, clarity, and curiosity.*
+

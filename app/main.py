@@ -4,7 +4,7 @@ import pandas as pd
 from app.utils.data_loader import load_csv
 from app.services.metrics import calculate_metrics
 from app.services.validator import validate_dataframe
-from app.services.ai_summary import generate_summary
+from app.services.ai_summary import generate_summary,generate_ai_summary
 
 
 
@@ -25,7 +25,10 @@ async def analyze_data(file: UploadFile = File(...)):
         return {"validation" : validation}
 
     metrics = calculate_metrics(df)
-    summary = generate_summary(metrics)
+    # summary = generate_summary(metrics) //openAi
+
+    summary = generate_ai_summary(metrics) // OllamaClient
+
 
     return {
         "validation" : validation,
