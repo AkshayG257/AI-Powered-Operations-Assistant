@@ -27,7 +27,7 @@ async def analyze_data(file: UploadFile = File(...)):
     metrics = calculate_metrics(df)
     # summary = generate_summary(metrics) //openAi
 
-    summary = generate_ai_summary(metrics) // OllamaClient
+    summary = generate_ai_summary(metrics)
 
 
     return {
