@@ -1,0 +1,526 @@
+{
+  "validation": {
+    "is_valid": true,
+    "info": {
+      "rows": 21,
+      "columns": 47,
+      "column_names": [
+        "Unnamed: 0",
+        "Workorder ID",
+        "Mainteance Type",
+        "Service Type",
+        "Description",
+        "Priority/Frequency",
+        "Status",
+        "Wokorder Journey",
+        "Building Manager Approval",
+        "Complex",
+        "Building",
+        "Zone",
+        "Space Unit",
+        "Asset Type",
+        "Asset Name",
+        "Asset Number",
+        "Contract Type",
+        "Response Time result",
+        "Pass Fail result",
+        "Evaluation result (out of 5)",
+        "Score",
+        "Reopend",
+        "Cost",
+        "Year",
+        "Month",
+        "Region",
+        "City",
+        "Checklist",
+        "Checklist task No",
+        "Rasied at",
+        "Supervisor responded at",
+        "Worker finished at",
+        "BM approved at",
+        "Target Date",
+        "Building Manager Approved",
+        "Building Manager Raised",
+        "Supervisor name",
+        "Worker name",
+        "Time to Response by supervisor",
+        "Time to complete by worker",
+        "SLA Response Time",
+        "SLA Pass Fail time",
+        "Maintenance request",
+        "Maintenance request raised by",
+        "Maintenance request raised at",
+        "Maintenenace requester email",
+        "Maintenenace requester phone"
+      ]
+    }
+  },
+  "metrics": {
+    "dataset": {
+      "row_count": 21,
+      "column_count": 47,
+      "missing_cells": 183
+    },
+    "columns": {
+      "Unnamed: 0": {
+        "missing_count": 21,
+        "missing_percentage": 100,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "median": null,
+        "std": null
+      },
+      "Workorder ID": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 21,
+        "top_values": {
+          "PM-025485": 1,
+          "PM-025487": 1,
+          "PM-025489": 1,
+          "PM-025491": 1,
+          "PM-025493": 1
+        }
+      },
+      "Mainteance Type": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 2,
+        "top_values": {
+          "preventive": 20,
+          "reactive": 1
+        }
+      },
+      "Service Type": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 2,
+        "top_values": {
+          "hard": 13,
+          "soft": 8
+        }
+      },
+      "Description": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 3,
+        "top_values": {
+          "22": 12,
+          "تنظيف يومي للممرات والمداخل": 8,
+          "teeete": 1
+        }
+      },
+      "Priority/Frequency": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 2,
+        "top_values": {
+          "متوسط-Medium/Daily": 20,
+          "متوسط-Medium": 1
+        }
+      },
+      "Status": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 2,
+        "top_values": {
+          "Open": 20,
+          "Closed": 1
+        }
+      },
+      "Wokorder Journey": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 2,
+        "top_values": {
+          "submitted": 20,
+          "finished": 1
+        }
+      },
+      "Building Manager Approval": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 2,
+        "top_values": {
+          "Pending": 20,
+          "Approved": 1
+        }
+      },
+      "Complex": {
+        "missing_count": 21,
+        "missing_percentage": 100,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "median": null,
+        "std": null
+      },
+      "Building": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 2,
+        "top_values": {
+          "مبنى أصول": 12,
+          "مبنى تجريبي -2 - Trial Bbuilding": 9
+        }
+      },
+      "Zone": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 2,
+        "top_values": {
+          "1st": 12,
+          "GF": 9
+        }
+      },
+      "Space Unit": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 3,
+        "top_values": {
+          "Room": 12,
+          "03": 8,
+          "مصعد": 1
+        }
+      },
+      "Asset Type": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 3,
+        "top_values": {
+          "كهرباء-Electricity": 12,
+          "تنظيف-Cleaning": 8,
+          "مكيفات-HVAC": 1
+        }
+      },
+      "Asset Name": {
+        "missing_count": 20,
+        "missing_percentage": 95.24,
+        "type": "categorical",
+        "unique_values": 1,
+        "top_values": {
+          "سبلت-Split": 1
+        }
+      },
+      "Asset Number": {
+        "missing_count": 20,
+        "missing_percentage": 95.24,
+        "min": 11,
+        "max": 11,
+        "mean": 11,
+        "median": 11,
+        "std": null
+      },
+      "Contract Type": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 1,
+        "top_values": {
+          "regular": 21
+        }
+      },
+      "Response Time result": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 1,
+        "top_values": {
+          "Late": 21
+        }
+      },
+      "Pass Fail result": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 2,
+        "top_values": {
+          "pending": 20,
+          "pass": 1
+        }
+      },
+      "Evaluation result (out of 5)": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 3,
+        "top_values": {
+          "0": 12,
+          "5": 1,
+          "-": 8
+        }
+      },
+      "Score": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 2,
+        "top_values": {
+          "-": 20,
+          "8.33": 1
+        }
+      },
+      "Reopend": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 1,
+        "top_values": {
+          "no": 21
+        }
+      },
+      "Cost": {
+        "missing_count": 1,
+        "missing_percentage": 4.76,
+        "min": 0,
+        "max": 0,
+        "mean": 0,
+        "median": 0,
+        "std": 0
+      },
+      "Year": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "min": 2023,
+        "max": 2023,
+        "mean": 2023,
+        "median": 2023,
+        "std": 0
+      },
+      "Month": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 2,
+        "top_values": {
+          "July": 12,
+          "August": 9
+        }
+      },
+      "Region": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 1,
+        "top_values": {
+          "Riyadh": 21
+        }
+      },
+      "City": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 1,
+        "top_values": {
+          "Riyadh": 21
+        }
+      },
+      "Checklist": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 1,
+        "top_values": {
+          "No": 21
+        }
+      },
+      "Checklist task No": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "min": 0,
+        "max": 0,
+        "mean": 0,
+        "median": 0,
+        "std": 0
+      },
+      "Rasied at": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 13,
+        "top_values": {
+          "2023-07-29": 2,
+          "2023-07-30": 2,
+          "2023-07-31": 2,
+          "2023-08-01": 2,
+          "2023-08-02": 2
+        }
+      },
+      "Supervisor responded at": {
+        "missing_count": 20,
+        "missing_percentage": 95.24,
+        "type": "categorical",
+        "unique_values": 1,
+        "top_values": {
+          "2023-08-03 16:40:41": 1
+        }
+      },
+      "Worker finished at": {
+        "missing_count": 20,
+        "missing_percentage": 95.24,
+        "type": "categorical",
+        "unique_values": 1,
+        "top_values": {
+          "2023-08-03 16:40:50": 1
+        }
+      },
+      "BM approved at": {
+        "missing_count": 20,
+        "missing_percentage": 95.24,
+        "type": "categorical",
+        "unique_values": 1,
+        "top_values": {
+          "2023-08-03 16:41:05": 1
+        }
+      },
+      "Target Date": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 14,
+        "top_values": {
+          "2023-08-01 00:00:00": 3,
+          "2023-07-30 00:00:00": 2,
+          "2023-07-31 00:00:00": 2,
+          "2023-08-02 00:00:00": 2,
+          "2023-08-03 00:00:00": 2
+        }
+      },
+      "Building Manager Approved": {
+        "missing_count": 20,
+        "missing_percentage": 95.24,
+        "type": "categorical",
+        "unique_values": 1,
+        "top_values": {
+          "Haitham BMA": 1
+        }
+      },
+      "Building Manager Raised": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 1,
+        "top_values": {
+          "Haitham BMA": 21
+        }
+      },
+      "Supervisor name": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 4,
+        "top_values": {
+          "SP Supervisor,general-sps-001,SPS 2,SPS 3,SPS Email ar,dsfsf,JJJ,AJMAN,SPS for contract test": 11,
+          "SP Supervisor,SPS 2,dsfsf,JJJ,AJMAN": 8,
+          "SP Supervisor": 1,
+          "SP Supervisor,general-sps-001,SPS 2,SPS 3,SPS Email ar,dsfsf,JJJ,Only HVAC SPS,New SPS hvac,AJMAN": 1
+        }
+      },
+      "Worker name": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 1,
+        "top_values": {
+          "Not Assigned": 21
+        }
+      },
+      "Time to Response by supervisor": {
+        "missing_count": 20,
+        "missing_percentage": 95.24,
+        "min": 10540,
+        "max": 10540,
+        "mean": 10540,
+        "median": 10540,
+        "std": null
+      },
+      "Time to complete by worker": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 2,
+        "top_values": {
+          "0": 1,
+          "-": 20
+        }
+      },
+      "SLA Response Time": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "min": 300,
+        "max": 300,
+        "mean": 300,
+        "median": 300,
+        "std": 0
+      },
+      "SLA Pass Fail time": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "min": 2880,
+        "max": 2880,
+        "mean": 2880,
+        "median": 2880,
+        "std": 0
+      },
+      "Maintenance request": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 1,
+        "top_values": {
+          "No": 21
+        }
+      },
+      "Maintenance request raised by": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 1,
+        "top_values": {
+          "-": 21
+        }
+      },
+      "Maintenance request raised at": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 1,
+        "top_values": {
+          "-": 21
+        }
+      },
+      "Maintenenace requester email": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 1,
+        "top_values": {
+          "-": 21
+        }
+      },
+      "Maintenenace requester phone": {
+        "missing_count": 0,
+        "missing_percentage": 0,
+        "type": "categorical",
+        "unique_values": 1,
+        "top_values": {
+          "-": 21
+        }
+      }
+    }
+  },
+  "ai_summary": " **Data Insight Summary:**\n\nThe dataset consists of 21 rows and 47 columns, with 183 missing cells (approximately 8.6%). Anomalies and risks are primarily concentrated in the following areas:\n\n1. **Missing Data**: Columns 'Complex', 'Asset Name', 'Asset Number', and 'Supervisor name' have 100% missing values, which could potentially impact data analysis and interpretation.\n\n2. **Incomplete Categorical Variables**: 'Checklist task No', 'Rasied at', 'Supervisor responded at', 'Worker finished at', 'BM approved at', 'Target Date', 'Building Manager Approved', 'Building Manager Raised', 'Supervisor name', 'Time to Response by supervisor', and 'Maintenenace requester phone' are incomplete or missing data, which could hinder a comprehensive analysis of these variables.\n\n3. **Narrow Distribution**: The 'Asset Type' column has only three unique values, suggesting potential homogeneity in the asset types present. This might limit the diversity of observations and insights that can be drawn from this dataset.\n\n4. **Data Quality Issues**: Several dates are missing or inconsistent (e.g., 'Rasied at', 'Supervisor responded at', 'Worker finished at', 'BM approved at', 'Target Date'), which could impact the accuracy of time-based analysis and reporting.\n\n5. **Unclear Data Classification**: Some variables, such as 'Maintenance request raised by' and 'Maintenenance requester email', have a single unique value (i.e., '-'), which may indicate improper data classification or missing information.\n\nRecommendations:\n- Investigate and address the root cause of the missing values in key columns such as 'Complex', 'Asset Name', 'Asset Number', and 'Supervisor name'.\n- Fill in or impute missing values where appropriate, and consider using techniques such as Hot Deck Imputation for categorical variables.\n- Review data quality issues related to dates and ensure consistency across the dataset.\n- Standardize and clean the categorical variable names for better interpretability and analysis.\n- Consider gathering additional asset type data or investigate potential reasons for the limited variety in this dataset."
+}

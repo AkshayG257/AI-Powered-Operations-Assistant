@@ -1,5 +1,6 @@
-from fastapi import FastAPI, UploadFile, File
+from fastapi import FastAPI, UploadFile, File, HTTPException
 import pandas as pd
+from typing import Dict
 
 from app.utils.data_loader import load_csv
 from app.services.metrics import calculate_metrics
@@ -18,7 +19,29 @@ def health_check():
 @app.post("/analyze-file")
 async def analyze_data(file: UploadFile = File(...)):
     # df = load_csv("data/sample_data.csv") // stattic test file
-    df = pd.read_csv(file.file)
+
+    filename = file.filename.lower()
+
+    if not (filename.endswith(".csv") or filename.endswith(".xlsx") or filename.endswith(".xls")):
+        raise HTTPException(
+            status_code=400,
+            detail = "Only csv or excel files are supported"
+        )
+
+    try:
+        if filename.endswith(".csv"):
+            df = pd.read_csv(file.file)
+        elif filename.endswith(".xlsx"):
+            df = pd.read_excel(file.file, engine="openpyxl")
+        elif filename.endswith(".xls"):
+            df = pd.read_excel(file.file, engine="xlrd")
+
+    except Exception as e:
+        raise HTTPException(
+            status_code = 400,
+            detail = f"Failed to read file : {str(e)}"
+        )
+
 
     validation = validate_dataframe(df)
     if not validation["is_valid"]:
@@ -27,12 +50,12 @@ async def analyze_data(file: UploadFile = File(...)):
     metrics = calculate_metrics(df)
     # summary = generate_summary(metrics) //openAi
 
-    summary = generate_ai_summary(metrics)
+    ai_summary = generate_ai_summary(metrics)
 
 
     return {
         "validation" : validation,
         "metrics" : metrics,
-        "ai_summary" : summary
+        "ai_summary" : ai_summary
     }
 

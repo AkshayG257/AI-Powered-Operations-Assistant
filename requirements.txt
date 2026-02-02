@@ -1,5 +1,7 @@
 fastapi
 uvicorn
-pandas
 sqlalchemy
 python-dotenv
+pandas
+openpyxl
+xlrd
